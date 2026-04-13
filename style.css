@@ -10,18 +10,17 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* push content up */
+  padding-top: 120px; /* vertical positioning */
 
   font-family: 'Poppins', sans-serif;
   color: white;
 
-  /* STRONG GRADIENT */
   background: linear-gradient(-45deg, #020617, #1d4ed8, #7c3aed, #ec4899);
   background-size: 300% 300%;
   animation: gradientMove 6s ease infinite;
 }
 
-/* BACKGROUND ANIMATION */
 @keyframes gradientMove {
   0% { background-position: 0% 50% }
   50% { background-position: 100% 50% }
@@ -37,32 +36,32 @@ body {
 
 /* TITLE */
 h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 /* SUBTEXT */
 .subtext {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 5px;
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 4px;
 }
 
 /* HINT */
 .hint {
-  font-size: 13px;
-  opacity: 0.7;
-  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.75;
+  margin-bottom: 25px;
 }
 
 /* INPUT */
 input {
   width: 100%;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 16px;
+  border-radius: 14px;
   border: none;
-  font-size: 16px;
+  font-size: 17px;
   outline: none;
   margin-bottom: 15px;
 }
@@ -70,36 +69,35 @@ input {
 /* BUTTON */
 button {
   width: 100%;
-  padding: 14px;
-  border-radius: 12px;
+  padding: 16px;
+  border-radius: 14px;
   border: none;
   background: linear-gradient(135deg, #22c55e, #4ade80);
   color: white;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 /* CARD (REVEAL + LOCKED) */
 .card {
   width: 90%;
   max-width: 420px;
-  padding: 30px;
+  padding: 35px;
+  text-align: center;
 
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(15px);
   border-radius: 20px;
-
-  text-align: center;
 }
 
-/* TITLE (THANK YOU) */
+/* THANK YOU TITLE */
 .title {
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -112,7 +110,7 @@ button:hover {
 /* TEXT CONTENT */
 #text {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.6;
   color: #e2e8f0;
 }
@@ -126,7 +124,7 @@ button:hover {
 
 /* LOCK TITLE */
 .lock-title {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 15px;
 }
 
