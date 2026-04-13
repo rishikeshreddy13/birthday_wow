@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Something 👀</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  
+  <h1>Something is waiting 👀</h1>
+
+  <p class="subtext">
+    Only a few people can access this…
+  </p>
+
+  <p class="hint">
+    Check what I sent you earlier 👀
+  </p>
+
+  <input 
+    id="codeInput" 
+    placeholder="Enter it here…" 
+    autocomplete="off"
+  />
+
+  <br><br>
+
+  <button onclick="checkCode()">Continue</button>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+  document.getElementById("codeInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      checkCode();
+    }
+  });
+</script>
+
+</body>
+</html>
