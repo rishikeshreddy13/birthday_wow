@@ -1,158 +1,144 @@
+/* RESET */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* BODY */
 body {
-  margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   font-family: 'Poppins', sans-serif;
   color: white;
-  overflow: hidden;
 
+  /* STRONG GRADIENT */
   background: linear-gradient(-45deg, #020617, #1d4ed8, #7c3aed, #ec4899);
   background-size: 300% 300%;
   animation: gradientMove 6s ease infinite;
 }
 
+/* BACKGROUND ANIMATION */
 @keyframes gradientMove {
   0% { background-position: 0% 50% }
   50% { background-position: 100% 50% }
   100% { background-position: 0% 50% }
 }
 
-/* glow layer */
-body::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
-  animation: rotateGlow 10s linear infinite;
-}
-
-@keyframes rotateGlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* input */
+/* MAIN CONTAINER */
 #app {
+  width: 90%;
+  max-width: 420px;
   text-align: center;
-  z-index: 2;
 }
 
+/* TITLE */
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* SUBTEXT */
+.subtext {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+/* HINT */
+.hint {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* INPUT */
 input {
-  padding: 12px;
-  border-radius: 10px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
   border: none;
   font-size: 16px;
+  outline: none;
+  margin-bottom: 15px;
 }
 
+/* BUTTON */
 button {
-  padding: 12px 24px;
+  width: 100%;
+  padding: 14px;
   border-radius: 12px;
   border: none;
   background: linear-gradient(135deg, #22c55e, #4ade80);
   color: white;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(34,197,94,0.7);
+  transform: scale(1.05);
 }
 
-/* card */
+/* CARD (REVEAL + LOCKED) */
 .card {
-  text-align: center;
-  max-width: 700px;
-  padding: 50px;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+
   background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(18px);
-  border-radius: 25px;
-  box-shadow: 0 20px 70px rgba(0,0,0,0.5);
-  animation: fadeUp 1s ease;
-  z-index: 2;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+
+  text-align: center;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-
-/* title */
+/* TITLE (THANK YOU) */
 .title {
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 800;
-  margin-bottom: 30px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  background: linear-gradient(90deg, #ffffff, #60a5fa, #facc15);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: shine 4s linear infinite;
+  margin-bottom: 20px;
 }
 
-@keyframes shine {
-  0% { background-position: 0% }
-  100% { background-position: 200% }
-}
-
-/* heart */
+/* HEART */
 .heart {
   color: #ff4d6d;
-  -webkit-text-fill-color: initial;
-  animation: heartBeat 1.5s infinite;
 }
 
-@keyframes heartBeat {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.2); }
-  50% { transform: scale(1); }
-  70% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-
-/* text */
+/* TEXT CONTENT */
 #text {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.6;
   color: #e2e8f0;
 }
 
+/* ANIMATED LINES */
 .line {
   opacity: 0;
-  transform: translateY(25px);
-  transition: all 0.7s ease;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
-/* highlight */
+/* LOCK TITLE */
+.lock-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* HIGHLIGHT */
 .highlight {
   color: #facc15;
   font-weight: 600;
 }
 
+/* GRADIENT TEXT */
 .gradient-glow {
   background: linear-gradient(90deg, #22d3ee, #60a5fa, #facc15);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-/* locked title */
-.lock-title {
-  font-size: 40px;
-  margin-bottom: 20px;
 }
